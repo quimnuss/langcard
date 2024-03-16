@@ -31,7 +31,6 @@ func load_game():
         if len(word_pair) == 2:
             add_word_pair(word_pair[0], word_pair[1])
 
-    print(word_pairs)
 
 func add_word_pair(left_word : String, right_word : String):
     var word_pair : WordPair = load("res://ui/word_pair.tscn").instantiate()
