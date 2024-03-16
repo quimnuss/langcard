@@ -1,0 +1,24 @@
+[gd_scene load_steps=2 format=3 uid="uid://ncf0p2da0f5f"]
+
+[ext_resource type="Script" path="res://ui/wort.gd" id="1_vb812"]
+
+[node name="WordPair" type="HBoxContainer"]
+
+[node name="LeftSpracheWort" type="Button" parent="."]
+custom_minimum_size = Vector2(100, 50)
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 1
+text = "word"
+script = ExtResource("1_vb812")
+
+[node name="RightSpracheWort" type="Button" parent="."]
+custom_minimum_size = Vector2(100, 50)
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 1
+text = "word"
+script = ExtResource("1_vb812")
+
+[connection signal="pressed" from="LeftSpracheWort" to="LeftSpracheWort" method="_on_pressed"]
+[connection signal="pressed" from="RightSpracheWort" to="RightSpracheWort" method="_on_pressed"]
