@@ -1,8 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://ncf0p2da0f5f"]
+[gd_scene load_steps=3 format=3 uid="uid://ncf0p2da0f5f"]
 
+[ext_resource type="Script" path="res://ui/word_pair.gd" id="1_hrn7w"]
 [ext_resource type="Script" path="res://ui/wort.gd" id="1_vb812"]
 
 [node name="WordPair" type="HBoxContainer"]
+script = ExtResource("1_hrn7w")
 
 [node name="LeftSpracheWort" type="Button" parent="."]
 custom_minimum_size = Vector2(100, 50)
@@ -20,5 +22,12 @@ mouse_filter = 1
 text = "word"
 script = ExtResource("1_vb812")
 
+[node name="Button" type="Button" parent="."]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+mouse_filter = 1
+text = "x"
+
 [connection signal="pressed" from="LeftSpracheWort" to="LeftSpracheWort" method="_on_pressed"]
 [connection signal="pressed" from="RightSpracheWort" to="RightSpracheWort" method="_on_pressed"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

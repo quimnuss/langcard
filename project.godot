@@ -11,13 +11,16 @@ config_version=5
 [application]
 
 config/name="langcard"
+run/main_scene="res://scenes/main_game.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [display]
 
 window/size/viewport_width=414
-window/size/viewport_height=736
+window/size/viewport_height=500
+window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
 window/handheld/orientation=1
 
 [input_devices]
